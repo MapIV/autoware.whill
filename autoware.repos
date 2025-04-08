@@ -81,8 +81,8 @@ repositories:
     version: 079820003a1c969df7fa02ca092e532c66ab809e
   sensor_component/external/tamagawa_imu_driver:
     type: git
-    url: https://github.com/tier4/tamagawa_imu_driver.git
-    version: de4bf6be79aa2968cf2f62e0ebe1ff8a5797e6ad
+    url: https://github.com/MapIV/tamagawa_imu_driver.git
+    version: ros2-humble
   sensor_component/external/nebula:
     type: git
     url: https://github.com/tier4/nebula.git
@@ -127,3 +127,9 @@ repositories:
     type: git
     url: https://github.com/MapIV/autoware_individual_params.whill.git
     version: from_tag2025.02
+   # realsense ros driver
+  vendor/realsense-ros:
+    type: git
+    url: https://github.com/IntelRealSense/realsense-ros.git
+    verison: 4.51.1
+  vendor/
