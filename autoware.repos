@@ -132,3 +132,7 @@ repositories:
     type: git
     url: https://github.com/IntelRealSense/realsense-ros.git
     verison: 4.51.1
+  sensor_kit/whill_sensor_kit_launch:
+    type: git
+    url: https://github.com/MapIV/whill_sensor_kit_launch.git
+    version: main
