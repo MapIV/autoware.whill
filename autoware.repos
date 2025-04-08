@@ -127,9 +127,8 @@ repositories:
     type: git
     url: https://github.com/MapIV/autoware_individual_params.whill.git
     version: from_tag2025.02
-   # realsense ros driver
+  # realsense ros driver
   vendor/realsense-ros:
     type: git
     url: https://github.com/IntelRealSense/realsense-ros.git
     verison: 4.51.1
-  vendor/
