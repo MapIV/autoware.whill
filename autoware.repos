@@ -82,7 +82,7 @@ repositories:
   sensor_component/external/tamagawa_imu_driver:
     type: git
     url: https://github.com/MapIV/tamagawa_imu_driver.git
-    version: ros2-humble
+    version: ros2-humble-whill
   sensor_component/external/nebula:
     type: git
     url: https://github.com/tier4/nebula.git
