@@ -138,7 +138,7 @@ repositories:
   vehicle/external/whill_autoware_interface:
     type: git
     url: https://github.com/MapIV/whill_autoware_interface.git
-    version: humble
+    version: humble-whill
   param/autoware_individual_params:
     type: git
     url: https://github.com/MapIV/autoware_individual_params.whill.git
