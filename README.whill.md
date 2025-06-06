@@ -74,6 +74,17 @@ IMUとLiDARについては，外部電源を必要とします．Whillを走行�
 USB(Serial)については，他のUSBデバイスを接続することでデバイス名が頻繁に変わる可能性が高いです．
 Whillの車速・ステア角が表示されないなど通信に問題があれば，実際のデバイス名と`whill interface`に登録されているデバイス名が一致しているか，確認ください．
 上記のトラブルを避けるために，常にデバイス名が一意になるように，udevを登録することがおすすめです．
+また，権限が不足していて通信ができない場合もあります．
+その際は，以下のコマンドで権限を付与してください．
+```bash
+sudo chmod 666 /dev/USBtty0
+```
+
+永続的に設定する場合は，`/lib/udev/rules.d/50-udev-default.rules`を以下の通りに書き換えてください
+```diff
+- KERNEL=="tty[A-Z]*[0-9]|pppox[0-9]*|ircomm[0-9]*|noz[0-9]*|rfcomm[0-9]*", GROUP="dialout"
++ KERNEL=="tty[A-Z]*[0-9]|pppox[0-9]*|ircomm[0-9]*|noz[0-9]*|rfcomm[0-9]*", GROUP="dialout", MODE="0666"
+```
 
 
 ### USB(CAN)の設定
@@ -81,13 +92,11 @@ Whillの車速・ステア角が表示されないなど通信に問題があれ
 USB(Serial)と同様，デバイス名を確認ください．
 また，USB(CAN)では接続するたびに，通信速度設定とリンクアップを行う必要があります．
 デバイス名が`can0`のとき，以下のとおりです．
-- install
-    ```bash
-    sudo apt install can-utils
-    ```
+
 - setup
     ```bash
-    sudo ptpd -M -i enp45s0
+    sudo ip link set can0 type can bitrate 500000
+    sudo ip link set can0 up
     ```
 
 
