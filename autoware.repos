@@ -100,10 +100,6 @@ repositories:
     type: git
     url: https://github.com/MapIV/tamagawa_imu_driver.git
     version: ros2-humble-whill
-  sensor_component/external/nebula:
-    type: git
-    url: https://github.com/tier4/nebula.git
-    version: f43a28d1a8a51aca5efcae9186139767154bc44f
   sensor_component/transport_drivers:
     type: git
     url: https://github.com/autowarefoundation/transport_drivers
@@ -133,10 +129,10 @@ repositories:
     type: git
     url: https://github.com/tier4/sensor_component_description.git
     version: 03ba094851ec90febfcfc0adb20b64b0e19df7a8
-  #sensor_component/external/nebula:
-    #type: git
-    #url: https://github.com/tier4/nebula.git
-    #version: v0.2.4
+  sensor_component/external/nebula:
+    type: git
+    url: https://github.com/tier4/nebula.git
+    version: v0.2.4
   # Fork of transport_drivers that enables reduction of copy operations
   sensor_component/transport_drivers:
     type: git
