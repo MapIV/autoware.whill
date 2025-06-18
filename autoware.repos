@@ -152,3 +152,8 @@ repositories:
     type: git
     url: https://github.com/tier4/agnocast.git
     version: 2.1.1
+
+  param/autoware_individual_params:
+    type: git
+    url: https://github.com/MapIV/autoware_individual_params.whill.git
+    version: from_tag_0.44.1
