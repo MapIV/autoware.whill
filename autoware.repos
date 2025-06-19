@@ -74,7 +74,7 @@ repositories:
   launcher/autoware_launch:
     type: git
     url: https://github.com/MapIV/autoware_launch.whill.git
-    version: from_tag2025.02
+    version: feat/from_tag2025.02/localization-only-launch
   sensor_component/external/sensor_component_description:
     type: git
     url: https://github.com/tier4/sensor_component_description.git
