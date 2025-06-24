@@ -126,7 +126,7 @@ repositories:
   vehicle/external/Y22_MAP_ros2_whill:
     type: git
     url: https://github.com/MapIV/Y22_MAP_ros2_whill.git
-    version: humble-devel
+    version: humble_devel/add-vel-cmd
   vehicle/external/ros2_whill_interfaces:
     type: git
     url: https://github.com/whill-labs/ros2_whill_interfaces.git
