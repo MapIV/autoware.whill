@@ -14,6 +14,7 @@ helpsc() {
     echo "  bagw  : Play sample for whill  logging simulator"
     echo "  whill : Launch whill"
     echo "  whill_l : Launch whill, localization only"
+    echo "  whill_l_sim : Launch whill, localization only in simulation"
     echo "  recw  : Record rosbag for whill"
 }
 
@@ -29,6 +30,7 @@ alias bag="ros2 bag play ~/autoware_map/sample-rosbag/ -r 0.2 -s sqlite3"
 alias bagw="ros2 bag play ~/whill_bag/rosbag2_2025_04_22-10_59_26 -r 0.2 --clock"
 alias whill="launch_whill"
 alias whill_l="launch_whill_localization"
+alias whill_l_sim="launch_whill_localization_sim"
 alias recw="ros2 bag record -o ~/whill_bag/bagfile \
                 /sensing/lidar/top/pandar_packets \
                 /sensing/imu/tamagawa/from_can_bus \
@@ -105,4 +107,13 @@ function launch_whill () {
 function launch_whill_localization () {
     install_setup
     ros2 launch autoware_launch autoware.whill.localization_only.launch.xml map_path:=$HOME/autoware_map/office_map 
+}
+
+function launch_whill_localization_sim () {
+    install_setup
+    ros2 launch autoware_launch autoware.whill.localization_only.launch.xml \
+        map_path:=$HOME/autoware_map/office_map \
+        use_sim_time:=true \
+        launch_sensing_driver:=false \
+        launch_vehicle_interface:=false
 }
