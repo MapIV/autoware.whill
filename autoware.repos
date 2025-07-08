@@ -90,9 +90,41 @@ repositories:
   # launcher
   launcher/autoware_launch:
     type: git
-    url: https://github.com/autowarefoundation/autoware_launch.git
-    version: 0.45.0
+    url: https://github.com/MapIV/autoware_launch.whill.git
+    version: from_tag_0.44.1
   # sensor_component
+  sensor_component/external/sensor_component_description:
+    type: git
+    url: https://github.com/tier4/sensor_component_description.git
+    version: 079820003a1c969df7fa02ca092e532c66ab809e
+  sensor_component/external/tamagawa_imu_driver:
+    type: git
+    url: https://github.com/MapIV/tamagawa_imu_driver.git
+    version: ros2-humble-whill
+  sensor_component/transport_drivers:
+    type: git
+    url: https://github.com/autowarefoundation/transport_drivers
+    version: 39ebd8afe1bb9760a6cd6272e428468480f6de90
+  sensor_component/ros2_socketcan:
+    type: git
+    url: https://github.com/autowarefoundation/ros2_socketcan
+    version: e39a814180b03f00a5692b6951a5d4e9f0463486
+  vehicle/external/pacmod_interface:
+    type: git
+    url: https://github.com/tier4/pacmod_interface.git
+    version: 1c033a21ce0c41cd4fb878b95d3e1620de79e95a
+  vehicle/external/Y22_MAP_ros2_whill:
+    type: git
+    url: https://github.com/MapIV/Y22_MAP_ros2_whill.git
+    version: humble-devel
+  vehicle/external/ros2_whill_interfaces:
+    type: git
+    url: https://github.com/whill-labs/ros2_whill_interfaces.git
+    version: crystal-devel
+  vehicle/external/whill_autoware_interface:
+    type: git
+    url: git@github.com:MapIV/whill_autoware_interface.git
+    version: humble-2025
   sensor_component/external/sensor_component_description:
     type: git
     url: https://github.com/tier4/sensor_component_description.git
