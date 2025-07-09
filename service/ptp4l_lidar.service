@@ -1,0 +1,12 @@
+[Unit]
+Description=Precision Time Protocol (PTP) service
+Documentation=man:ptp4l
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/ptp4l -f /etc/linuxptp/ptp4l.conf -i enx04ab183ce2c2 -m -S -A
+Restart=always
+RestartSec=1s
+
+[Install]
+WantedBy=multi-user.target

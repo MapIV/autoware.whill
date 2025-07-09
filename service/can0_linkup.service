@@ -1,0 +1,11 @@
+[Unit]
+Description=can0_linkup
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ip link set can0 up type can bitrate 500000
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
