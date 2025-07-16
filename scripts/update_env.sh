@@ -8,4 +8,8 @@ sudo cp $HOME/autoware.whill/config/ptp4l.conf /etc/linuxptp/ptp4l.conf
 sudo cp $HOME/autoware.whill/service/*.service /etc/systemd/system -v
 sudo systemctl daemon-reload
 
+sudo systemctl enable can0_linkup.service
+sudo systemctl enable ptp4l_lidar.service
+sudo systemctl enable multicast-lo.service
+
 echo "Please reboot the system to apply settings!"
